@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="style.css">   
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: plum;
+        }
+        header {
+            background-color: black;
+            color:hotpink;
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            margin: 30px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 30px;
+        }
+        .movie {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: plum;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .movie img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .movie h2 {
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .movie p {
+            margin-top: 5px;
+            color: #666;
+        }
+        /* Navigation Slide Bar */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            z-index: 1;
+        }
+        .sidenav a {
+            padding: 10px 8px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        
+       .movie-list-container{
+
+              padding: 20px;
+       }
+
+       
+        .movie-list{
+            display: flex;
+            align-items: center;
+            height: 300px ;
+      }
+
+ .movie-list-item{
+    margin-right:30px ;
+
+ }
+  .movie-list-item :hover .movie-list-item-image{
+       transform: scale(1.2);
+    margin: 0 30px;
+  }
+
+  .movie-list-item-image{
+        transition: all 1s ease-in-out;
+        width: 250px;
+        height: 180;
+        -o-object-fit: cover;
+
+  }
+
+  .social-icons a img {
+    width: 30px; 
+    height: auto;
+    margin-right: 10px; 
+}
+
+  
+  
+  
+  </style>    
+</head>
+<body>
+
+<header>
+ <img src="wb img.jpeg" alt="Warner Bros. Logo" width="250" height="180">
+    <h1>WARNER BRO'S</h1>
+    <span style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776; Open</span>
+    <div class="search" style="position:absolute;top:10px; right:10px;width:250px;height:50px;">
+        <label for="Search"> search </label>
+        <input type="search" id="search">
+        </div>
+        
+  </div>
+</header>
+
+<div class="sidenav" id="mySidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+    <a href="index.html">Home</a>
+    <a href="movies.html">Movies</a>
+    <a href="tvshows.html">TV Shows</a>
+    <a href="gamesandapps.html">Games and Apps</a>
+    <a href="collections.html">Collections</a>
+    <a href="feedback.html">Feedback</a>
+    
+</div> 
+  
+
+<div class="movie-list-item">
+    <img class="movie-list-item-img" src="imagesinsideout.jpeg" alt="">
+    <span class="movie-list-item-title">Inside Out 2</span>
+    <p class="movie-list-item-desk">Joy, Sadness, Anger, Fear and Disgust have been running a successful operation by all accounts. However, when Anxiety shows up, they aren't sure how to feel</p>
+
+</div>
+
+<div class="Movie">
+    <img src="imagesluca.jpeg" alt="Luca">
+    <h3>Luca, a sea monster, befriends Alberto, another one of his kind who takes him on a land adventure. He experiences an exciting summer while keeping his parents in the dark.</h3>
+    <p>Family, Fantacy</p>
+</div>
+
+<div class="Movie">
+    <img src="imagesmulan.jpeg" alt="Mulan">
+    <h3>Mulan is a 1998 American animated musical coming-of-age action-adventure film produced by Walt Disney Feature Animation for Walt Disney Pictures.</h3>
+    <p>Family,Musical</p>
+</div>
+
+<div class="movie">
+    <img src="imagesscream.jpeg" alt="Scream">
+    <h3>Sam Carpenter returns to Woodsboro after her sister gets attacked by the Ghostface. She approaches Dewey Riley to help catch the killer, who warns Sidney and Gale.</h3>
+    <p>Horror</p>
+</div>
+
+<div class="movie">
+    <img src="imagestheequalizer.jpeg" alt="The Equalizer">
+    <h3>With his violent past behind him, McCall decides to lead a quiet life. However, when he sees a young girl, Teri, being controlled by violent gangsters, he once again takes up the fight for justice.</h3>
+    <p>Action Thriller</p>
+</div>
+
+<div class="Movie">
+    <img src="Top gun.jpeg" alt="Top Gun Maverick">
+    <h3>Thirty years of service leads Maverick to train a group of elite TOPGUN graduates to prepare for a high-profile mission while Maverick battles his past demons. </h3>
+    <p>Action/Adventure</p>
+</div>
+
+<div class="Movie">
+    <img src="ananabelle.jpeg" alt="Annabelle">
+    <h3>John and Mia  Form are attacked by members of a satanic cult that uses their old doll as a conduit to make their life miserable. This unleashes a string of paranormal events in the Forms' residence.</h3>
+    <p>Horror</p>
+</div>
+
+<div class="Movie">
+    <img src="the bodyguard.jpeg" alt="The Bodyguard">
+    <h3>Rachel, a singer and an actor, receives death threats from an obsessive stalker. However, things turn chaotic when she hires Frank, an ex-Secret Service agent, to be her bodyguard and falls for him.</h3>
+    <p>Romance, Thriller </p>
+</div>
+
+<footer>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/warnerbrosent/"><img src="facebook.png" alt="Facebook"></a>
+        <a href="https://twitter.com/Warnerbros/"><img src="twitter.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/warnerbrosentertainment/"><img src="insta.jpeg" alt="Instagram"></a>
+        <a href="https://www.youtube.com/user/WarnerBrosPictures"><img src="youtube.png
+            " alt="YouTube"></a>
+    </div>
+</footer>
+<script>
+function toggleNav() {
+  var sidebar = document.getElementById("mySidenav");
+  if (sidebar.style.width === "120px") {
+    sidebar.style.width = "0";
+  } else {
+    sidebar.style.width = "120px";
+  }
+}
+</script>
+</body>
+</html>
