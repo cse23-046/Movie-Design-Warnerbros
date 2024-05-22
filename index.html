@@ -117,24 +117,49 @@
     margin-right: 10px; 
 }
 
+.search-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 250px;
+    height: 50px;
+}
 
+.search-container input[type="search"] {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: none; 
+     border-radius: 20px; 
+    padding-left: 40px; 
+}
+
+
+
+.search-container img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute; 
+    top: 50%; 
+    left: 10px; 
+    transform: translateY(-50%); margin-left: 10px;
+
+
+}
 
     </style>    
-
-
-
 </head>
 <body>
-<header style="position: inherit;">
+<header>
  <img src="wb img.jpeg" alt="Warner Bros. Logo" width="250" height="180">
     <h1>WARNER BRO'S</h1>
     <span style="font-size:30px;cursor:pointer" onclick="toggleNav()">&#9776; Open</span>
-    <div class="search" style="position:absolute;top:10px; right:10px;width:250px;height:50px;">
-        <label for="Search"> search </label>
-        <input type="search" id="search">
-        </div>
-        
-  </div>
+    <div class="search-container">
+        <input type="search" id="search" placeholder="Search">
+        <img src="search.png" alt="search" onclick="search()">
+    </div>
 </header> 
 
 
@@ -216,10 +241,9 @@
 <footer>
     <div class="social-icons">
         <a href="https://www.facebook.com/warnerbrosent/"><img src="facebook.png" alt="Facebook"></a>
-        <a href="https://twitter.com/Warnerbros/"><img src="twitter.png" alt="Twitter"></a>
+        <a href="https://twitter.com/Warnerbros/"><img src="twitter.png" alt="twitter"></a>
         <a href="https://www.instagram.com/warnerbrosentertainment/"><img src="insta.jpeg" alt="Instagram"></a>
-        <a href="https://www.youtube.com/user/WarnerBrosPictures"><img src="youtube.png
-            " alt="YouTube"></a>
+        <a href="https://www.youtube.com/user/WarnerBrosPictures"><img src="youtube.png" alt="YouTube"></a>
     </div>
 </footer>
 <script>
@@ -231,6 +255,24 @@ function toggleNav() {
     sidebar.style.width = "120px";
   }
 }
+
+function search() {
+  var input, filter, items, title, description, i;
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  items = document.querySelectorAll(".movie-list-item");
+  for (i = 0; i < items.length; i++) {
+    title = items[i].querySelector(".movie-list-item-title");
+    description = items[i].querySelector(".movie-list-item-desk");
+    if (title.innerText.toUpperCase().indexOf(filter) > -1 || description.innerText.toUpperCase().indexOf(filter) > -1) {
+      items[i].style.display = "";
+    } else {
+      items[i].style.display = "none";
+    }
+  }
+}
+document.getElementById("search").addEventListener("keyup", search);
 </script>
 </body>
 </html>
+
